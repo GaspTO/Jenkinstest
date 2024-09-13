@@ -1,10 +1,12 @@
 pipeline {
     agent any
 
+    options { skipDefaultCheckout() }
+    
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello, World!'
+                sh 'cat example.txt'
             }
         }
     }
