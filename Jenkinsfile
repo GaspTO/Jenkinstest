@@ -7,7 +7,7 @@ pipeline {
     	stage('Checkout') {
             steps {
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']],
-                          userRemoteConfigs: [[url: 'git@github.com:GaspTO/Jenkinstest.git']]])
+                          userRemoteConfigs: [[name: 'jenkins_totas', url: 'git@github.com:GaspTO/Jenkinstest.git']]])
             }
         }	
     
